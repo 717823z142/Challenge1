@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        body{
+            background-image: url(img2.jpg);
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size:cover;
+            padding-top: 200px;
+        }
+    </style>
+    <script>  
+        function verifyPassword() {  
+          var pw = document.getElementById("pswd").value;  
+          var mail = document.getElementById("mailid").value;
+          console.log(mail);
+         
+          if(pw == "") {  
+             document.getElementById("message").innerHTML = "**Fill the password please!";  
+             return false;  
+          }  
+           
+       
+          if(pw.length < 8) {  
+             document.getElementById("message").innerHTML = "**Password length must be atleast 8 characters";  
+             return false;  
+          }  
+         
+        
+          if(pw.length > 15) {  
+             document.getElementById("message").innerHTML = "**Password length must not exceed 15 characters";  
+             return false;  
+          } else {  
+             alert("Password is correct");  
+          }  
+          if(mail == "") {  
+             document.getElementById("message").innerHTML = "**Fill the MailID please!";  
+             return false;  
+          }
+        }  
+        </script>e
+</head>
+<body><center>
+    <form  action="alert.html" onsubmit="verifyPassword()">
+
+        <h1 style="background-color: aliceblue; width: fit-content; height: fit-content;"> UserName</h1>
+        <input type="email", width="fit-content" ,name="username" id="mailid">
+        <h1 style="background-color: aliceblue; width: fit-content; height: fit-content;">PassWord</h1>
+        <input type="text", width="fit-content" ,name="password" id="pswd">
+        <br>
+        <span id = "message" style="color:rgb(230, 14, 212)"></span><br>
+        <input type="submit" >
+    </form>
+    </body></center>
+</body>
+</html>
